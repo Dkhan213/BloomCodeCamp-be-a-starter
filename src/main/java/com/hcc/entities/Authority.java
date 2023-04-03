@@ -2,6 +2,10 @@ package com.hcc.entities;
 
 import javax.persistence.*;
 
+/**
+ * Class for the <b>AUTHORITY</b> entity of the backend application. It represents the role assigned to each <b>User</b>.
+ * It is mapped to the <em>authorities</em> postgreSQL table with the <b>id</b> being the primary key.
+ */
 @Entity
 @Table(name = "authorities")
 public class Authority {
@@ -9,8 +13,6 @@ public class Authority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "authority")
     private String authority;
 //    private User user;
 

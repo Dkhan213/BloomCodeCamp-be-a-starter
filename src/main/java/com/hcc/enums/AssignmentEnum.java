@@ -2,6 +2,9 @@ package com.hcc.enums;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * An enum class containing all the assignments currently available in the applications.
+ */
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum AssignmentEnum {
 

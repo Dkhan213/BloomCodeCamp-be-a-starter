@@ -1,5 +1,8 @@
 package com.hcc.dto;
 
+/**
+ * A class to be used for authorization credential checks and passes.
+ */
 public class AuthCredentialRequest {
 
     private Long userId;

@@ -1,35 +1,33 @@
 package com.hcc.controllers;
 
-import com.hcc.entities.Assignment;
-import com.hcc.repositories.AssignmentRepository;
+import com.hcc.entities.User;
+import com.hcc.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
-    AssignmentRepository assignmentRepository;
+    UserService userService;
 
-    @GetMapping
-    public ResponseEntity<?> getAssignments() {
-        List<Assignment> assignments = assignmentRepository.findAll();
-        return ResponseEntity.ok(assignments);
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getUser(@PathVariable Long id) {
+        Optional<User> user = userService.getUser(id);
+        return ResponseEntity.ok(user);
     }
 
-    @GetMapping("{userId}")
-    public ResponseEntity<?> getAssignmentById(@PathVariable Long assignmentId) {
-        Optional<Assignment> assignmentOptional = assignmentRepository.findById(assignmentId);
-        return ResponseEntity.ok(assignmentOptional.orElse(new Assignment()));
+    @PostMapping("/user")
+    public void addUser(@RequestBody User user) {
+        userService.addUser(user);
     }
 
-    @PostMapping
-    public ResponseEntity<?> createAssignment(@RequestBody Assignment assignment) {
-        return ResponseEntity.ok(assignmentRepository.save(assignment));
+    @DeleteMapping("/user/{userId}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
     }
 }

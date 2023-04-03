@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Class for the <b>USER</b> entity of the backend application. It represents the users of the application.
+ * It is mapped to the <em>user</em> postgreSQL table with the <b>id</b> being the primary key.
+ */
 @Entity
 @Table(name = "users")
 public class User {
@@ -11,24 +15,23 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "cohort_start_date")
     private Date cohortStartDate;
-
-    @Column(name = "username")
     private String username;
-
-    @Column(name = "password")
     private String password;
+
 
 //    private List<Authority> authorities;
 
-    public User(long id, Date cohortStartDate, String username, String password, List<Authority> authorities) {
+    public User(Long id, Date cohortStartDate, String username, String password, List<Authority> authorities) {
         this.id = id;
         this.cohortStartDate = cohortStartDate;
         this.username = username;
         this.password = password;
 //        this.authorities = authorities;
+    }
+
+    public User(Long id) {
+        this.id = id;
     }
 
     public long getId() {

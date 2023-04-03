@@ -1,5 +1,9 @@
 package com.hcc.dto;
 
+/**
+ * Class for the <b>ASSIGNMENT RESPONSE DATA TRANSFER OBJECT</b>. It is used to respond to http requests with data associated with
+ * a specific assignment.
+ */
 public class AssignmentResponseDto {
 
     private Long userId;

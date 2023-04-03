@@ -2,6 +2,10 @@ package com.hcc.entities;
 
 import javax.persistence.*;
 
+/**
+ * Class for the <b>ASSIGNMENT</b> entity of the backend application. It represents the assignments that each <b>USER</b> could potentially be associated with.
+ * It is mapped to the <em>assignments</em> postgreSQL table with the <b>id</b> being the primary key.
+ */
 @Entity
 @Table(name = "assignments")
 public class Assignment {
@@ -9,32 +13,23 @@ public class Assignment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "status")
     private String status;
-
-    @Column(name = "number")
     private int number;
-
-    @Column(name = "githuburl")
     private String githubUrl;
-
-    @Column(name = "branch")
     private String branch;
-
-    @Column(name = "reviewvideourl")
     private String reviewVideoUrl;
-//    private User user;
+    @ManyToOne
+    private User user;
 //    private User codeReviewer;
 
-    public Assignment(Long id, String status, int number, String githubUrl, String branch, String reviewVideoUrl, User user, User codeReviewer) {
+    public Assignment(Long id, String status, int number, String githubUrl, String branch, String reviewVideoUrl, Long userId, User codeReviewer) {
         this.id = id;
         this.status = status;
         this.number = number;
         this.githubUrl = githubUrl;
         this.branch = branch;
         this.reviewVideoUrl = reviewVideoUrl;
-//        this.user = user;
+        this.user = new User(userId);
 //        this.codeReviewer = codeReviewer;
     }
 
@@ -89,13 +84,13 @@ public class Assignment {
         this.reviewVideoUrl = reviewVideoUrl;
     }
 
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 //
 //    public User getCodeReviewer() {
 //        return codeReviewer;
