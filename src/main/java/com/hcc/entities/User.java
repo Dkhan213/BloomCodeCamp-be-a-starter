@@ -18,9 +18,7 @@ public class User {
     private Date cohortStartDate;
     private String username;
     private String password;
-
-
-//    private List<Authority> authorities;
+    private List<Authority> authorities;
 
     public User(Long id, Date cohortStartDate, String username, String password, List<Authority> authorities) {
         this.id = id;

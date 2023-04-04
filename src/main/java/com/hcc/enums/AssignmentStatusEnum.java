@@ -3,7 +3,7 @@ package com.hcc.enums;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * An enum class representing all the possible status's for each assignment.
+ * An enum class representing all the possible statuses for each assignment.
  */
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum AssignmentStatusEnum {

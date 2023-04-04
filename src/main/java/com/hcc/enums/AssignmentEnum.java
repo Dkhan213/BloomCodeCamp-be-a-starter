@@ -3,7 +3,7 @@ package com.hcc.enums;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * An enum class containing all the assignments currently available in the applications.
+ * An enum class containing all the assignments currently available in the application.
  */
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum AssignmentEnum {

@@ -20,7 +20,7 @@ public class Assignment {
     private String reviewVideoUrl;
     @ManyToOne
     private User user;
-//    private User codeReviewer;
+    private User codeReviewer;
 
     public Assignment(Long id, String status, int number, String githubUrl, String branch, String reviewVideoUrl, Long userId, User codeReviewer) {
         this.id = id;
