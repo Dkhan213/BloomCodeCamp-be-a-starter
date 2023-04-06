@@ -8,14 +8,19 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * A service <b>Class</b> that uses business logic to communicate with the <b>AssignmentRepository</b>
+ * in order to update the table: <b>assignments</b>.
+ */
+
 @Service
 public class AssignmentService {
 
     @Autowired
     AssignmentRepository assignmentRepository;
 
-    public List<Assignment> getAllAssignments(Long userId) {
-        return assignmentRepository.findByUserId(userId);
+    public List<Assignment> getAllAssignments() {
+        return assignmentRepository.findAll();
     }
 
     public Optional<Assignment> getAssignment(Long id) {

@@ -13,12 +13,12 @@ import java.util.List;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date cohortStartDate;
     private String username;
     private String password;
-    private List<Authority> authorities;
+//    private List<Authority> authorities;
 
     public User(Long id, Date cohortStartDate, String username, String password, List<Authority> authorities) {
         this.id = id;
@@ -28,15 +28,19 @@ public class User {
 //        this.authorities = authorities;
     }
 
-    public User(Long id) {
+    public User(Long id, String username) {
         this.id = id;
+        this.username = username;
     }
 
-    public long getId() {
+    public User() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
