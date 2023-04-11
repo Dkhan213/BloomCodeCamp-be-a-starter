@@ -1,0 +1,15 @@
+tr {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+}
+
+
+th {
+    font-size: 15px;
+    border-style: solid;
+    padding: 1rem;
+    background-color: rgb(204, 201, 201);
+    width: 15rem;
+    text-align: center;
+}

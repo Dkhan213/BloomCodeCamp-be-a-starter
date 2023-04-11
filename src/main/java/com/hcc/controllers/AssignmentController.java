@@ -18,6 +18,7 @@ import java.util.Map;
  * <b>DELETE</b> requests.
  */
 
+@CrossOrigin
 @RestController
 @RequestMapping("api/v1/assignments")
 public class AssignmentController {

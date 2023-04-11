@@ -1,0 +1,20 @@
+.footer-container {
+    font-family: Roboto, sans-serif;
+    margin-top: 13rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #7e57c2;
+    color: rgb(191, 191, 191);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+section {
+    cursor: pointer;
+}
+
+section:hover {
+    color: white;
+}

@@ -1,0 +1,21 @@
+.facts-section {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+h2 {
+    font-weight: 300;
+    color: #7e57c2;
+    font-size: 30px;
+    margin-bottom: 8rem;
+}
+
+.font-to-bold {
+    font-weight: 500;
+}
+
+p {
+    margin-top: 3rem;
+    font-size: 20px;
+}

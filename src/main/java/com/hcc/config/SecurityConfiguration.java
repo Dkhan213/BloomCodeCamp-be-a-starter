@@ -14,10 +14,15 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import static com.hcc.enums.AuthorityEnum.*;
 
+/**
+ * A class for configuring the Spring Boot Security implementation of the app.
+ */
+
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+    // Creates an instance of the BTCrypt Password Encoder
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
@@ -25,6 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.passwordEncoder = passwordEncoder;
     }
 
+    // Main configuration
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -35,10 +41,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();
-//                .formLogin()
-//                .loginPage("/login").permitAll()
-//                .defaultSuccessUrl("/courses", true);
+                .formLogin()
+                .loginPage("/login").permitAll()
+                .defaultSuccessUrl("/assignments", true)
+                .failureUrl("/login");
     }
 
     @Override

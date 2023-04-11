@@ -20,6 +20,7 @@ import java.util.Map;
  * created in order to handle all requests to create/update/delete <b>Users</b> of the application.
  */
 
+@CrossOrigin
 @RestController
 @RequestMapping("management/api/v1/students")
 public class ManagementController {
