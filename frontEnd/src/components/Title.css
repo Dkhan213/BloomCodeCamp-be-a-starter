@@ -1,0 +1,53 @@
+.title-container {
+    text-align: left;
+    padding-left: 20rem;
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    background-image: url(https://assets.website-files.com/5e318ddf83dd66053d55c38a/6336e52c1821574c76280138_toolbanner-assreview.jpg);
+    cursor: default;
+    background-size: 2300px;
+    background-position: 50% 43%;
+    display: block;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 50px;
+}
+
+h3 {
+    margin-top: 1rem;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.sign-in-button {
+    background-color: rgb(42, 144, 245);
+    color: white;
+    border: none;
+    background-image: url("https://assets.website-files.com/5e318ddf83dd66053d55c38a/636f4dcb63d653050269f37b_chevron-white.svg");
+    background-position: 98% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    cursor: pointer;
+    padding: 0 28px 0 10px;
+    height: 50px;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .56px;
+    margin-top: 3rem;
+    border-radius: 5px;
+    transition: opacity 0.2s,
+}
+
+.sign-in-button:hover {
+    opacity: 0.8;
+}
+.sign-in-button:active {
+    opacity: 0.5
+}
