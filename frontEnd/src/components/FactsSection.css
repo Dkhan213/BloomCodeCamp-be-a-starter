@@ -1,7 +1,7 @@
 .facts-section {
     font-family: Roboto, sans-serif;
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 5rem;
 }
 
 h2 {
@@ -18,4 +18,10 @@ h2 {
 p {
     margin-top: 3rem;
     font-size: 20px;
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    
 }

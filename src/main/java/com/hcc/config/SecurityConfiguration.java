@@ -22,7 +22,11 @@ import static com.hcc.enums.AuthorityEnum.*;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+<<<<<<< HEAD
     // Creates an instance of the BTCrypt Password Encoder
+=======
+    // Creates an instance of the BCrypt Password Encoder
+>>>>>>> main
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
